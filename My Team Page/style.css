@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+html {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 1.3rem;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+@media (min-width: 640px) {
+  body {
+    padding: 7rem 1.3rem 2.5rem;
+  }
+}
+.presentation-box {
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 3rem;
+  justify-content: space-between;
+}
+@media (min-width: 640px) {
+  .presentation-box {
+    flex-direction: row;
+  }
+}
+.presentation-box .title {
+  width: 100%;
+  font-family: 'PT Serif', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.0045;
+}
+.presentation-box .subtitle-box {
+  width: 100%;
+  padding-bottom: .7rem;
+}
+.presentation-box .subtitle-box .subtitle {
+  text-transform: uppercase;
+  padding-bottom: .7rem;
+  font-size: 1.29rem;
+}
+.presentation-box .subtitle-box .team-desc {
+  font-size: 1rem;
+  width: 85%;
+}
+@media (min-width: 640px) {
+  .presentation-box .subtitle-box .team-desc {
+    font-size: 1.29rem;
+    letter-spacing: 1px;
+  }
+}
+.flex-container {
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+}
+.flex-container .member {
+  width: 42%;
+  max-width: 242px;
+  position: relative;
+  margin-bottom: 2rem;
+}
+.flex-container .member .member-protrait {
+  width: 100%;
+}
+
+.flex-container .member .member-job {
+  position: absolute;
+  transform: rotate(90deg);
+  white-space: nowrap;
+  transform-origin: 0 0;
+  margin-left: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'PT Serif';
+  font-size: .7rem;
+}
+.flex-container .member .member-name {
+  font-weight: 600;
+  letter-spacing: .05rem;
+}
+@media (max-width: 640px) {
+  .flex-container .member:nth-child(2n) {
+    margin-top: 7rem;
+  }
+  .flex-container .member .member-job {
+    margin-left: 1rem;
+    margin-right: .2rem;
+  }
+}
+@media (min-width: 640px) {
+  .flex-container .member:nth-child(3n+2) {
+    margin-top: 7rem;
+  }
+}
+footer {
+  margin: 2.5rem;
+}
+footer p {
+  font-size: 1.1rem;
+  color: grey;
+}
