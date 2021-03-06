@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+body {
+  background-color: #333;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  height: auto;
+  padding-bottom: 1rem;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+li {
+  list-style: none;
+}
+/*Navbar*/
+.nav-wrapper {
+  width: 100%;
+  position: relative;
+  top: 0;
+  max-width: 90vw;
+  margin: 0 auto;
+}
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
+  height: 70px;
+  overflow: hidden;
+}
+.navbar .logo {
+  height: 16px;
+  width: auto;
+  justify-self: start;
+  white-space: nowrap;
+}
+.navbar .logo a {
+  border: 1px solid #fff;
+  padding: .1rem;
+  font-family: 'Crimson Pro', serif;
+  text-transform: uppercase;
+  position: relative;
+  white-space: nowrap;
+}
+.navbar ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-self: end;
+  grid-column-gap: 3rem;
+}
+.nav-item a {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.nav-item a:hover {
+  text-decoration: underline;
+}
+.nav-item a.active {
+  text-decoration: underline;
+}
+/*Mobile Menu & Animation*/
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px auto;
+  transition: all .4s ease-in-out;
+}
+.menu-toggle {
+  justify-self: end;
+  margin-right: 25px;
+  display: none;
+}
+.menu-toggle:hover {
+  cursor: pointer;
+}
+#mobile-menu.is-active .bar:nth-child(2) {
+  opacity: 0;
+}
+#mobile-menu.is-active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+#mobile-menu.is-active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+section {
+  max-width: 90vw;
+  width: 100%;
+  margin: 0 auto;
+}
+.section-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+.section-wrapper .presentation-box {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: space-evenly;
+}
+.section-wrapper .presentation-box h1 {
+  font-family: Lora;
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 61px;
+}
+.section-wrapper .presentation-box p {
+  font-family: Montserrat;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 29px;
+}
+.section-wrapper .presentation-box a {
+  font-family: Montserrat;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 22px;
+}
+.section-wrapper .presentation-box a:hover span {
+  padding-left: 1rem;
+}
+.photo-box {
+  position: relative;
+}
+.photo-box .image-photo-box img {
+  width: 100%;
+  height: auto;
+}
+.photo-box .author-box {
+  position: absolute;
+  bottom: -5.5rem;
+  right: 1rem;
+  z-index: 1;
+  padding: 0.8125rem 1.25rem 1.5625rem 1.25rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: #181719;
+  width: 400px;
+}
+.photo-box .author-box .profile {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.photo-box .author-box .author-info .author-name {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+}
+.photo-box .author-box .author-info .author-job {
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+}
+.photo-box .author-box .author-title {
+  font-family: Lora;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 31px;
+  padding-top: 1rem;
+  width: 60%;
+}
+.photo-box .author-box .profile .img-box img {
+  width: 3rem;
+  height: 3rem;
+  margin-right: .9rem;
+  background-color: #828282;
+  border-radius: 50%;
+}
+footer {
+  margin-top: 10rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 950px) {
+  .navbar ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    height: calc(100vh - 70px);
+    text-align: center;
+    overflow: hidden;
+    transform: translate(-101%);
+  }
+  .navbar li {
+    padding: 15px;
+  }
+  .navbar li:first-child {
+    margin-top: 70px;
+  }
+  .nav-item a {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .nav-item a.active {
+    text-decoration: none;
+  }
+  .menu-toggle, .bar {
+    display: block;
+    cursor: pointer;
+  }
+  .mobile-nav {
+    transform: translate(0%) !important;
+    transition: all .4s ease-in-out;
+    z-index: 11;
+  }
+  .section-wrapper {
+    flex-direction: column;
+  }
+  .section-wrapper .presentation-box {
+    width: 100%;
+  }
+  .section-wrapper .presentation-box h1 {
+    font-family: Lora;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 46px;
+    white-space: nowrap;
+  }
+  .section-wrapper .presentation-box p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    width: 80vw;
+  }
+  .section-wrapper .presentation-box a {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+  .section-wrapper .photo-box {
+    margin-top: 5rem;
+  }
+  .photo-box .author-box {
+    padding: 1rem;
+    width: auto;
+    height: auto;
+  }
+}
+@media (max-width: 440px) {
+  .photo-box .author-box .author-info .author-name {
+    font-size: 10px;
+  }
+  .photo-box .author-box .author-info .author-job {
+    font-size: 10px;
+  }
+  .photo-box .author-box .author-title {
+    font-family: Lora;
+    font-size: .8rem;
+    padding-top: .5rem;
+  }
+}
