@@ -51,5 +51,34 @@
       <img src="./photo6.png" alt="Photo 6">
     </div>
   </main>
+  <div class="overlay">
+    <div class="image-preview">
+      <button class="close">X Close</button>
+      <img>
+    </div>
+  </div>
+
+
+  <script>
+    const overlay = document.querySelector('.overlay');
+    const imagePreview = document.querySelector('.image-preview img');
+    const closeBtn = document.querySelector('.close');
+
+    function handleClick(e) {
+      const src= e.currentTarget.querySelector('img').src;
+      imagePreview.src = src;
+      overlay.classList.add('open');
+    }
+
+    function close() {
+      overlay.classList.remove('open');
+    }
+    
+    const imageBoxes = document.querySelectorAll('.image-box');
+
+    imageBoxes.forEach(imageBox => imageBox.addEventListener('click', handleClick));
+
+    closeBtn.addEventListener('click', close);
+  </script>
 </body>
 </html>
