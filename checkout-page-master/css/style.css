@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+}
+.wrapper {
+  padding: 2rem;
+}
+main {
+  display: flex;
+  flex-direction: column;
+}
+h1.page-title {
+  font-size: 3rem;
+}
+.order-preview {
+  background-color: #eee;
+  padding: 2rem;
+  border-radius: 10px;
+  margin: 2rem 0;
+}
+.order-item {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.item-image img {
+  width: 150px;
+  height: 150px;
+  border-radius: 1rem;
+}
+.item-price {
+  color: #ffc600;
+  font-weight: 700;
+}
+.item-old-price {
+  font-size: 1.1rem;
+}
+.item-quantity-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #333;
+  padding: 1rem;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  width: 120px;
+}
+.item-quantity-box .js-quantity-btn {
+  background: #ccc;
+  border-radius: 5px;
+  user-select: none;
+}
+.item-quantity-box .js-quantity-btn:hover {
+  cursor: pointer;
+  background-color: #ffc600;
+}
+.order-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #333;
+  padding: 1rem 0;
+}
+
+/* info */
+h3 {
+  font-size: 2rem;
+  margin: 2rem 0;
+}
+.form-field {
+  margin: 1rem 0;
+}
+.form-field input {
+  background: none;
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 1.5rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.form-field .input-field {
+  margin-top: .5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid #333;
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+  color: gray;
+  width: 100%;
+}
+.form-field .input-field:focus-within, .form-field .input-field:focus-within i {
+  background-color: lightgoldenrodyellow;
+  color: #ffc600;
+}
+.sub-form-field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+.sub-form-field > * {
+  width: 100%;
+}
+#sub-field-select select {
+  border: none;
+  outline: none;
+  width: 100%;
+}
+#sub-field-select:focus-within select {
+  background-color: lightgoldenrodyellow;
+}
+#sub-field-select:focus-within select option {
+  background-color: #fff;
+}
+button {
+  margin: 1rem 0;
+  float: right;
+  background-color: #ffc600;
+  color: #f8f8f8;
+  border: none;
+  outline: none;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border-radius: .5rem;
+  transition: all .3s linear;
+}
+button:hover {
+  background-color: #ffc60090;
+  color: #333;
+}
+@media (min-width: 1000px) {
+  .wrapper {
+    max-width: 950px;
+    margin: 0 auto;
+  }
+  main {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .order-preview {
+    height: 500px;
+    padding: 3rem 2rem;
+  }
+}
+@media (max-width: 550px) {
+  .sub-form-field {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: unset;
+  }
+}
