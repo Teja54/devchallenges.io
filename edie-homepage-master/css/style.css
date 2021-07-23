@@ -10,7 +10,7 @@ html {
 }
 body {
   font-family: "Poppins", sans-serif;
-  overflow-x: hidden;
+  
 }
 li {
   list-style: none;
@@ -52,7 +52,9 @@ nav,
   display: flex;
   align-items: center;
 }
-
+main {
+  overflow-x: hidden;
+}
 nav {
   justify-content: space-between;
   padding: 2rem;
